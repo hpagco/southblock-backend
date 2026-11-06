@@ -1,0 +1,17 @@
+name = "southblock-api"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Comma-separated list of sites allowed to call the API from a browser.
+# "*" is fine for local dev. Before going live set it to your site, e.g.
+# "https://southblock.pages.dev,https://www.yourdomain.com"
+ALLOWED_ORIGINS = "*"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "southblock-db"
+# Local dev works with this placeholder. For production replace it with the id printed by:
+#   npx wrangler d1 create southblock-db
+database_id = "REPLACE_WITH_ID_FROM_WRANGLER_D1_CREATE"
+migrations_dir = "migrations"

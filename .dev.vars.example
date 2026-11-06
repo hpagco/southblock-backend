@@ -1,0 +1,4 @@
+# Copy this file to ".dev.vars" (same folder) for local development. NEVER commit .dev.vars.
+# For production set these with:  npx wrangler secret put ADMIN_TOKEN   (and IP_SALT)
+ADMIN_TOKEN=change-me-to-a-long-random-string
+IP_SALT=change-me-too

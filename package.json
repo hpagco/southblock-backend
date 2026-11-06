@@ -1,0 +1,21 @@
+{
+  "name": "southblock-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "db:migrate:local": "wrangler d1 migrations apply southblock-db --local",
+    "db:seed:local": "wrangler d1 execute southblock-db --local --file=seed/seed.sql",
+    "db:migrate:remote": "wrangler d1 migrations apply southblock-db --remote",
+    "db:seed:remote": "wrangler d1 execute southblock-db --remote --file=seed/seed.sql",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.0.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.0.0"
+  }
+}
